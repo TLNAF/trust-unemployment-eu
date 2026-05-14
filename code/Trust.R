@@ -7,10 +7,10 @@ library(modelsummary)
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 # 1. Reading data
-trust_data <- read.csv("OECD Trust 2010-2023.csv")
-unemployment_data <- read.csv("Unemployment 2010-2023.csv")
-gdp_raw <- read.csv("OECD GDP 2010-2023.csv")
-inflation_raw <- read.csv("Inflation 2010-2023.csv")
+trust_data <- read.csv("data/OECD Trust 2010-2023.csv")
+unemployment_data <- read.csv("data/Unemployment 2010-2023.csv")
+gdp_raw <- read.csv("data/OECD GDP 2010-2023.csv")
+inflation_raw <- read.csv("data/Inflation 2010-2023.csv")
 
 # 2. Merging and cleaning
 # 2.1. Cleaning Trust data:
@@ -54,16 +54,17 @@ merged_data <- merged_data %>%
 
 # 4. Plotting Unemployment vs. Trust:
 merged_data %>%
-  filter(Year == 2023) %>%
+  filter(Year == 2022) %>%
   ggplot(aes(x = Unemployment_Rate, y = Trust_Score)) +
   geom_point(size = 3, color = "steelblue") +
   geom_text(aes(label = Country), vjust = -1, size = 3) +
   geom_smooth(method = "lm", color = "red", linetype = "dashed", se = FALSE) +
   theme_minimal() +
-  labs(title = "Trust vs. Unemployment (2023)",
+  labs(title = "Trust vs. Unemployment (2022)",
        x = "Unemployment Rate (%)",
        y = "Trust Score (%)") +
   ylim(0, 100)
+ggsave("output/trust_unemployment_plot.png", width = 8, height = 6, dpi = 300)
 
 # 5. Calculate correlation:
 correlation_res <- cor.test(merged_data$Unemployment_Rate, merged_data$Trust_Score)
@@ -89,5 +90,5 @@ models <- list(
 
 modelsummary(models,
              stars = TRUE,
-             output = "regression_table.tex",
+             output = "output/regression_table.tex",
              gof_omit = "IC|Log|Adj")
