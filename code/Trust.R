@@ -4,7 +4,7 @@
 library(tidyverse)
 library(fixest)
 library(modelsummary)
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+setwd(dirname(dirname(rstudioapi::getActiveDocumentContext()$path)))
 
 # 1. Reading data
 trust_data <- read.csv("data/OECD Trust 2010-2023.csv")
