@@ -1,5 +1,5 @@
 # Replication Package
-## Unemployment and Trust in Government: Evidence from Europe
+## Unemployment and Institutional Trust in Europe
 
 **Authors**: Quoc Viet Tran, Vladimir Litvinov, Daniel Jenkin, Theodor Tchipev  
 **Course**: ECO_1S002_EP - Topics in Applied Econometrics  
