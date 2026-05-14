@@ -10,7 +10,7 @@
 
 ## Data Sources
 
-The project combines publicly available datasets from the \textbf{OECD} and \textbf{Eurostat}.
+The project combines publicly available datasets from the **OECD** and **Eurostat**.
 
 ### Trust in Government
 Source: OECD  
@@ -59,6 +59,8 @@ project/
 │   └── regression_table.tex
 ├── research_paper.tex
 └── README.md
+```
+---
 
 ## Replication Instructions
 
@@ -68,6 +70,9 @@ This project is implemented in R. The following packages are required:
 
 ```r
 install.packages(c("tidyverse", "fixest", "modelsummary", "rstudioapi"))
+```
+
+---
 
 ## Output Files
 
