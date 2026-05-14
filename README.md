@@ -53,7 +53,7 @@ project/
 │   ├── OECD GDP 2010-2023.csv
 │   └── Inflation 2010-2023.csv
 ├── code/
-│   └── analysis.R
+│   └── Trust.R
 ├── output/
 │   ├── trust_unemployment_plot.png
 │   └── regression_table.tex
