@@ -4,7 +4,6 @@
 **Authors**: Quoc Viet Tran, Vladimir Litvinov, Daniel Jenkin, Theodor Tchipev  
 **Course**: ECO_1S002_EP - Topics in Applied Econometrics  
 **Institution**: *École Polytechnique* - Institut Polytechnique de Paris
-
 **Date**: May 2026
 
 ---
