@@ -10,7 +10,7 @@
 
 ## Data Sources
 
-The project combines publicly available datasets from the :contentReference[oaicite:1]{index=1} and :contentReference[oaicite:2]{index=2}.
+The project combines publicly available datasets from the \textbf{OECD} and \textbf{Eurostat}.
 
 ### Trust in Government
 Source: OECD  
@@ -59,3 +59,29 @@ project/
 │   └── regression_table.tex
 ├── research_paper.tex
 └── README.md
+
+## Replication Instructions
+
+### Requirements
+
+This project is implemented in R. The following packages are required:
+
+```r
+install.packages(c("tidyverse", "fixest", "modelsummary", "rstudioapi"))
+
+## Output Files
+
+| File | Description |
+|---|---|
+| `trust_unemployment_plot.png` | Scatter plot of unemployment vs trust (2022) |
+| `regression_table.tex` | Regression results (OLS + FE models) |
+
+## Project Workflow
+
+1. Import raw OECD and Eurostat datasets  
+2. Clean and standardize country names and variables  
+3. Merge datasets into a balanced panel  
+4. Produce descriptive analysis (scatter plot + correlation)  
+5. Estimate OLS regressions  
+6. Estimate two-way fixed effects model  
+7. Export regression table and figures
